@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+<article class="font-sans relative py-24 md:py-28 bg-white overflow-hidden" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="relative px-4 sm:px-6 lg:px-8">
+    <div class="text-lg max-w-prose mx-auto mb-4">
+      <h1
+        class="mt-2 mb-2 text-3xl text-center-DIS leading-8 font-extrabold tracking-tight-DIS text-gray-800 sm:text-4xl sm:leading-10"
+        itemprop="name headline">
+				<%= resource.data.title %></h1>
+    </div>
+    <p class="max-w-prose mx-auto mb-2 text-lg uppercase text-gray-500"><span class="font-bold tracking-wide">
+			<%  date_format = site.metadata.date_format || "%b %-d, %Y" %>
+			<time class="dt-published text-xs" datetime="<%= resource.data.date.xmlschema %>" itemprop="datePublished">
+				<%= resource.data.date.strftime date_format %>
+      </time>
+			<% if resource.data.modified_date %>
+				<%  mdate = resource.data.modified_date.xmlschema %>
+				<time class="dt-modified text-sm" datetime="<%= mdate %>" itemprop="dateModified">
+				<%=  resource.data.modified_date.strftime date_format %>
+				</time>
+			<% end %>
+
+			<% if resource.data.author %>
+      • <%=  resource.page.author.each do  |author|  %>
+					<span itemprop="author text-sm" itemscope itemtype="http://schema.org/Person">
+					<span class="p-author h-card" itemprop="name"><%= author %></span></span>
+				<% end %>
+		 <% end %>
+    </span></p>
+    <!-- 
+      Please sign up at https://www.soopr.co to personalize share and reaction buttons
+    -->
+    <div class="max-w-prose text-lg mx-auto mt-4 mb-8 soopr-btn soopr-btn-def" style="min-height: 36px;"></div>
+  </header>
+
+  <div class="prose prose-lg px-4 md:px-0 text-gray-700 mx-auto" itemprop="articleBody">
+<%= yield %>
+  </div>
