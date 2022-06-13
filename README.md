@@ -1,4 +1,4 @@
-# Cookie - a fast and easy to deploy a landing website using Bridgetown.
+# Cookie - a fast and easy landing website using Bridgetown.
 
 > Its a migration of the famous [Jekyll Theme](ihttps::/github.com/abhinavs/cookie). 
 
