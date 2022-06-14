@@ -1,3 +1,8 @@
+<%#    ------------------------------------------------------------------------  %>
+<%#    Layout site                                                               %>
+<%#                 the calling script has to include its own main tag           %>
+<%#    ------------------------------------------------------------------------  %>
+
 <!doctype html>
 <html lang="<%= site.locale %>" class="h-full">
   <head>
@@ -6,9 +11,7 @@
   <body class="h-full <%= resource.data.layout %> <%= resource.data.page_class %>">
     <%= render Shared::Navbar.new( metadata: site.metadata, resource: resource ) %> 
 
-    <main>
       <%= yield %>
-    </main>
 
     <%= render "footer", metadata: site.metadata %>
   </body>
