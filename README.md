@@ -1,9 +1,13 @@
 # Cookie - a fast and easy landing website using Bridgetown.
 
-> Its a migration of the famous [Jekyll Theme](ihttps::/github.com/abhinavs/cookie). 
+> It 
+>  * is a migration of the famous [Jekyll Theme](ihttps::/github.com/abhinavs/cookie). 
+>  * uses ERB-Templates  
+>  * has some Components defined which expose the power of Bridegtown
+>  
 
 <img src="https://raw.githubusercontent.com/abhinavs/cookie/master/assets/img/cookie.png" />
-Cookie is a Bridgetown and Tailwind CSS based static website that makes the whole process of creating and launching landing websites extremely easy. With its responsive and mobile friendly pages, integrated blog, additional pages and [Soopr](https://www.soopr.co) integration, you can focus on building your product than landing website.
+Cookie is a Bridgetown and Tailwind CSS based static website that makes the whole process of creating and launching landing websites extremely easy. 
 
 ## Features
 * Well-designed landing page
@@ -15,22 +19,22 @@ Cookie is a Bridgetown and Tailwind CSS based static website that makes the whol
 * SEO optimized (uses [Bridgetown SEO Tag](https://github.com/bridgetownrb/bridgetown-seo-tag))
 * RSS feed (uses [Bridgetown Feed](https://github.com/bridgetownrb/bridgetown-feed))
 * Easy to deploy, one-click deploy possible
-* [Soopr](https://www.soopr.co) integrated - easy to customize share & like buttons, URL shortning and website analytics
-* Auto generated share images for social media using Soopr
 
 
 ## Demo
-You can see original jekyll-demo app deployed [here](https://cookie-demo.netlify.app/)
+You can see original Jekyll-demo app deployed [here](https://cookie-demo.netlify.app/).  
+The output is identical. 
 
 ## Why Bridgetown
-Jekyll is a static website generator - what it means is that in production, your site will be faster because it has been converted into HTML pages while deployment. Another reason is that by separating your landing website from your app website, your app servers get comparatively free and can boost performance for your regular customers. 
+Bridgetown is – like Jekyll – a static website generator. In production, your site will be faster because it has been converted into HTML pages while deployment. Another reason is that by separating your landing website from your app website, your app servers get comparatively free and can boost performance for your regular customers. 
 
 Cookie uses Tailwind 3.0 
 
 ## Installation
-1. [Fork this repository](https://github.com/topofocus/cookie/fork).
+1. clone this repository: `git clone https://github.com/topofocus/cookie`.
 2. `cd cookie`
-3. `bin/bootstrap`
+3. `bundle install && bundle update`
+3. `yarn add all`
 
 ## Starting Server
 `bin/bt start` - development server will start at http://127.0.0.1:4000
@@ -49,10 +53,10 @@ Cookie uses Tailwind 3.0
 <img src="https://raw.githubusercontent.com/abhinavs/cookie/master/assets/img/twitter_card.png" />
 
 ## Deploy Instructions
-Website can be easily deployed on all the cloud providers (AWS etc.), and on static website hosting services like Netlify & Vercel. You can also use this button to do one click deploy
+Website can be easily deployed on all the cloud providers (AWS etc.), and on static website hosting services like Render, Netlify & Vercelr; 
 <br />
 <br />
-[![Deploy with Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/topofocus/cookie)
+or you can just copy the contents of the `output` directory to the root of your Webserver.
 
 
 ## Contributing
