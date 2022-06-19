@@ -12,22 +12,15 @@ Cookie is a Bridgetown and Tailwind CSS based static website that makes the whol
 * Integrated blog, write content in markdown format
 * Easy to customize using Tailwind CSS
 * Fast and performant website
-* SEO optimized (uses [Jekyll SEO Tag](https://github.com/jekyll/jekyll-seo-tag))
-* RSS feed (uses [Jekyll Feed](https://github.com/jekyll/jekyll-feed))
-* Easy to deploy, one-click deploy on [Netlify](https://www.netlify.com) possible
+* SEO optimized (uses [Bridgetown SEO Tag](https://github.com/bridgetownrb/bridgetown-seo-tag))
+* RSS feed (uses [Bridgetown Feed](https://github.com/bridgetownrb/bridgetown-feed))
+* Easy to deploy, one-click deploy possible
 * [Soopr](https://www.soopr.co) integrated - easy to customize share & like buttons, URL shortning and website analytics
 * Auto generated share images for social media using Soopr
 
 
 ## Demo
-[![Netlify Status](https://api.netlify.com/api/v1/badges/58bd7992-1cc1-4fb9-b684-6be577a06324/deploy-status)](https://app.netlify.com/sites/cookie-demo/deploys)
-<br />
-You can see demo app deployed [here](https://cookie-demo.netlify.app/)
-
-## Used by
-* [SkillsEdge](https://www.skillsedge.co/)
-* [Soopr](https://www.soopr.co)
-* [APIC Agent](https://www.apicagent.com)
+You can see original jekyll-demo app deployed [here](https://cookie-demo.netlify.app/)
 
 ## Why Bridgetown
 Jekyll is a static website generator - what it means is that in production, your site will be faster because it has been converted into HTML pages while deployment. Another reason is that by separating your landing website from your app website, your app servers get comparatively free and can boost performance for your regular customers. 
@@ -52,7 +45,6 @@ Cookie uses Tailwind 3.0
 6. You can customize image assets in `images` directory.
 7. You will have to hook the 'Work with Us' form present on main page with a real backend.
 8. [Font Awesome](https://fontawesome.com/) is also integrated, to add any icon in your HTML files, you can refer to the website
-9. Sign up for free on [Soopr](https://www.soopr.co) and add your `publish_token` in `data/side-metadata.yml` file - with this, each page gets short URL, like button and auto generated share image for social media.
 
 <img src="https://raw.githubusercontent.com/abhinavs/cookie/master/assets/img/twitter_card.png" />
 

@@ -9,7 +9,7 @@ template_engine:  erb
     You can write your blog intro here
     </p>
   <ul class="mt-12">
-  <% collections.posts.resources.each do |post| %>
+<%   collections.posts.resources.each do |post|                                                                                             %>
 
     <li class="mt-16 list-reset">
       <time class="uppercase text-xs text-gray-500 font-bold"> <%=  post.date.strftime site.metadata.date_format  %></time>
@@ -22,6 +22,6 @@ template_engine:  erb
       </div>
     </li>
     <hr class="w-full bg-gray-100 my-12" style="height: 1px;">
-     <% end %>
+<%   end                                                                                                                                   %>
   </ul>
 </div>

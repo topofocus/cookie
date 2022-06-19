@@ -10,18 +10,15 @@ front_matter do
 
   tmp_cards = []
   tmp_cards << { title: 'Test',
-                  color: 'red',
                   symbol: 'fingerprint',
                   text: "First Card: Content for this! 
                            ( **interpreded** by the `markdown` filter)" }
   tmp_cards << { title: 'Free Revisions',
-                  color: 'green',
                   symbol: 'retweet',
                   text: "Write a few lines about each one. A paragraph describing a
                                   feature will be enough. Keep you user engaged!" }
    tmp_cards << { title: 'Verified Company',
-                   color: 'green',
-                   symbol: 'awarda',
+                   symbol: 'award',
                    text: "Keep you user engaged by providing meaningful information.
                                   Remember that by this time, the user is curious."}
 
@@ -73,7 +70,7 @@ front_matter do
           <div class="flex flex-row flex-wrap mx-auto">
             <% resource.data.cards.each_with_index do | card, i |  %>
               <%= render Shared::Card.new( title: card[:title], text: card[:text],
-                                       position: i, color: card[:color], symbol: card[:symbol] )  %>
+                                       position: i,  symbol: card[:symbol] )  %>
             <% end %>
           </div>
           <div class="flex flex-wrap items-center mt-32">
