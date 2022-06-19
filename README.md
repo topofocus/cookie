@@ -1,6 +1,6 @@
 # Cookie - a fast and easy landing website using Bridgetown.
 
-> It 
+> Cookie 
 >  * is a migration of the famous [Jekyll Theme](ihttps::/github.com/abhinavs/cookie). 
 >  * uses ERB-Templates  
 >  * has some Components defined which expose the power of Bridegtown
