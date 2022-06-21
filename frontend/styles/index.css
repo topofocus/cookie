@@ -7,6 +7,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import FontAwesome */
+
+/* @import "../fonts/fontsawesome-free/css/all.min.css";  */
+@import "@fontsawesome-free/css/all.min.css";
+
 :root {
   --body-background: #f2f2f2;
   --body-color: #444;
