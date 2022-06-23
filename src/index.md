@@ -74,16 +74,10 @@ front_matter do
             <% end %>
           </div>
           <div class="flex flex-wrap items-center mt-32">
-          <%# render Presentation.new   %>
-            <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
-              <div class="text-gray-600 p-3 text-center inline-flex 
-                          items-center justify-center w-16 h-16 mb-6 
-                          shadow-lg rounded-full bg-red-100" >
-                <i class="fas fa-user-friends text-xl"></i>
-              </div>
-              <h3 class="text-3xl mb-2 font-semibold leading-normal">
-                Working with us is a pleasure
-              </h3>
+<%= render Shared::Presentation.new(  icon: 'fa-user-friends',
+                                     title: "Working with us is a pleasure",
+                                     color: 'red',
+                                     position: 0) do                                                          %>
               <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700" >
                 Don't let your uses guess by attaching tooltips and popoves to
                 any element. Just make sure you enable them first via
@@ -98,13 +92,21 @@ front_matter do
                  class="font-bold text-gray-500 px-8 py-4 rounded-md bg-gray-50 hover:bg-gray-400 hover:text-gray-50">
                 Check Cookie!
               </a>
-            </div>
-            <%= render Shared::RoundedPicture.new( image: '/images/section1.jpeg', color: 'pink', 
-                                                    title: 'Top Notch Serices') do %>
+<%        end                                                                                                 %>
+<%= render Shared::RoundedPicture.new( image: '/images/section1.jpeg', color: 'pink',
+                                                    title: 'Top Notch Serices') do                            %>
                     The Arctic Ocean freezes every winter and much of the
                     sea-ice then thaws every summer, and that process will
                     continue whatever happens.
-            <% end %>
+<%          end                                                                                               %>
+        </div></div>
+            </div>
+<%= render Shared::RoundedPicture.new( image: '/images/section1.jpeg', color: 'pink',
+                                                    title: 'Top Notch Serices') do                            %>
+                    The Arctic Ocean freezes every winter and much of the
+                    sea-ice then thaws every summer, and that process will
+                    continue whatever happens.
+<%          end                                                                                               %>
         </div></div>
       </section>
       <section class="relative py-20">
