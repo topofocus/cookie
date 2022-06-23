@@ -21,8 +21,9 @@
 				 <%= @title %>
 			 </h4>
 			 <p class="text-md font-light mt-2 text-white">
-			 TEST
-				<%= markdownify content %>
+<%# 			 Normal content is white, but if markdowniied, a new paragraph is created and the color switches to black %>
+<%#       markdownify content                                                                                       %>
+<%=       content                                                                                                   %>
 				</p>
 		 </blockquote>
     <% end %>
