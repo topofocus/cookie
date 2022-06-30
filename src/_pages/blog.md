@@ -1,6 +1,11 @@
 ---
 layout: default
 template_engine:  erb
+navbar_background: "bg-gray-900"             # Prefix 'bg'
+navbar_logo: "text-pink-300"                 # Logo & Hambuger
+navbar_button: "bg-orange-500"               # Prefix "bg"
+navbar_icon: "lg:text-green-600"             # Prefix "lg:text"
+navbar_label: "lg:text-yellow-300"            # Prefix "lg:text"  
 ---
 
 <div class="container max-w-screen-md py-24 md:py-28 mx-auto px-4 sm:px-6 lg:px-8">

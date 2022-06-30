@@ -1,14 +1,22 @@
 ---
 layout: post
 title:  "Your First Post"
-date:   2022-06-12 13:57:11 +0200
 categories: updates
+navbar_background: "bg-gray-900"             # Prefix 'bg'
+navbar_icon: "lg:text-green-600"             # Prefix "lg:text"
 ---
-You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes.
+
+This is done automatically using
+
+```
+bin/bt start 
+```
+from the root directory. 
 
 To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
 
-Jekyll also offers powerful support for code snippets:
+Bridetown offers powerful support for code snippets:
 
 ```ruby
 def print_hi(name)

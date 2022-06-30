@@ -1,8 +1,15 @@
 <div class="<%= @first_class %>">
 	<div class="<%= @icon_class %>">
 		<%#			 class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600" %>
-		 
-		 <i class="fas <%= @icon %> text-xl"></i>
+		<% if @icon =~ /fa-/   %>
+		 		 <i class="fas <%= @icon %> text-xl"></i>   
+				 <% else %>
+		<img
+				src="/images/<%= @icon %>"
+			  class="p-1  rounded  rounded-lg"
+				  alt="..."
+					/>
+					<% end %>
 		</div>
 		<h3 class="text-3xl mb-2 font-semibold leading-normal">
 			<%= @title %>

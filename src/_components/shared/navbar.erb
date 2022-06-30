@@ -1,74 +1,64 @@
-<nav
-      class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 navbar-expand-lg bg-gray-800"
-    >
-      <div
-        class="container px-4 mx-auto flex flex-wrap items-center justify-between"
-      >
-        <div
-          class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start"
-        >
-          <a
-            class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase text-white"
-            href="/"
-            >Cookie</a
+<nav class="<%= master_class  %>">   
+      <div class="container px-4 mx-auto flex flex-wrap items-center justify-between" >
+<% ########################################################## Logo + Hamburger ###################################################################################################### %>
+        <div class="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start" >
+					<a class="text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase <%= logo_color %>"
+            href="/" >
+						Cookie
+					</a
           ><button
             class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
             type="button"
-            onclick="toggleNavbar('example-collapse-navbar')"
+            onclick="toggleNavbar('hieronymus-collapse-navbar')"
           >
-            <i class="text-white fas fa-bars"></i>
+            <i class=" <%= logo_color %>  fas fa-bars"></i>
           </button>
         </div>
+				<% # next define the hamburger menue background and dimensions. Set to transparent if not needed %>
+				<% # it is set to `bg-white` by default                                                          %>
         <div
-          class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
-          id="example-collapse-navbar"
-        >
-          <ul class="flex flex-col lg:flex-row list-none mr-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="/blog"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
-                ></i>
-                Blog</a
-              >
-            </li>
-          </ul>
-          <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://www.facebook.com"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab fa-facebook text-lg leading-lg "
-                ></i
-                ><span class="lg:hidden inline-block ml-2">Share</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://twitter.com/HieronM"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "
-                ></i
-                ><span class="lg:hidden inline-block ml-2">Tweet</span></a
-              >
-            </li>
-            <li class="flex items-center">
-              <a
-                class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-                href="https://github.com/topofocus/cookie"
-                ><i
-                  class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "
-                ></i
-                ><span class="lg:hidden inline-block ml-2">Star</span></a
-              >
-            </li>
+						class="lg:flex flex-grow items-center <%= icon_color %> bg-white  lg:bg-transparent lg:shadow-none hidden"
+          id="hieronymus-collapse-navbar" >
+<% ########################################################### Left aligned Items ##################################################################################################### %>
+        <ul class="flex flex-col lg:flex-row list-none mr-auto">
+<%= render   Shared::NavLink.new(  href: "/blog", 
+                                   icon: 'fa-solid fa-book-open', 
+																	 icon_colour: icon_color, 
+																	 text_colour: text_color       ) do                                                                                                                   %>
+	      Blog 
+<% end                                                                                                                                                                                  %>
+<%= render   Shared::NavLink.new   href: "/blog",       
+                                   icon: 'fa-solid fa-book',   
+																	 text: 'Digital Future', 
+																	 icon_colour: icon_color,  
+																	 text_colour: text_color                                                                                                                              %>
+
+        </ul>
+<% ########################################################### Right aligned Items #################################################################################################### %>
+				<ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+<%= render   Shared::NavLink.new   href: "https://facebook.com/ficoach",       
+                                   icon: 'fa-brands fa-linkedin',   
+																 	 text: "Publish on LinkedIn", 
+																	 display: 'no',      
+																	 icon_colour: icon_color                  %>
+<%= render   Shared::NavLink.new   href: "https://facebook.com/ficoach",
+                                   icon: 'fa-brands fa-facebook',   
+																	 text: "Share on Facebook",   
+																	 display: 'no' ,      
+																	 icon_colour: icon_color                 %>
+<%= render   Shared::NavLink.new   href: "https:/twitter.com/@HieronM",
+                                   icon: 'fa-brands fa-twitter',    
+																	 text: "Tweet",               
+																	 display: 'no' ,      
+																	 icon_colour: icon_color                 %>
+<%= render   Shared::NavLink.new   href: "https://github.com/topofocus/cookie", 
+                                   icon: 'fa-brands fa-github',     
+																	 text: "Star",                
+																	 display: 'no' ,      
+																	 icon_colour: icon_color                 %>  
             <li class="flex items-center">
               <button
-                class="bg-white text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
+									class="<%= button_color %> text-gray-800 active:bg-gray-100 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
                 type="button"
                 style="transition: all 0.15s ease 0s;"
               >

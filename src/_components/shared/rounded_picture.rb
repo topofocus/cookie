@@ -3,6 +3,7 @@ class Shared::RoundedPicture < Bridgetown::Component
 		# colors: blue, green
     @title, @image, @align = title, image, align
 		@color =  "bg-#{color}-600"
+    @polygon_color =  "text-#{color}-600"
 
   end
 

@@ -1,0 +1,19 @@
+<li class="flex items-center">
+	<a class="<%= text_color %> lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"  
+     href=" <%= @href %> " >
+    <i class="<%= the_class %>" ></i>
+<% if @display.to_s != 'no'      %>
+<%   if @text.blank?             %>
+<%=      content                 %>
+<%   else                        %>
+<%=      @text                   %>
+<%   end                         %>
+<%   else                        %>
+<%    if @text.blank?            %>
+       <span class="lg:hidden inline-block ml-2"><%= content %></span>
+<%    else                       %>
+       <span class="lg:hidden inline-block ml-2"><%= @text %></span>
+<%    end                        %>
+<% end                           %>
+  </a >
+</li>

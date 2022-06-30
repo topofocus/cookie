@@ -1,6 +1,6 @@
 
 <div class="<%= first_class %>">
-	<div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg bg-pink-600" >
+	<div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-lg rounded-lg <%= @color %> " >
 	 <img alt="..."
 		src="<%= @image %>"
 	class="w-full align-middle rounded-t-lg" />
@@ -14,15 +14,15 @@
 					style="height: 95px; top: -94px;" >
 				 <polygon
 						 points="-30,95 583,95 583,65"
-						 class="text-pink-600 fill-current" >
+						 class="<%= @polygon_color %>  fill-current" >
 				 </polygon>
 			 </svg>
 			 <h4 class="text-xl font-bold text-white">
 				 <%= @title %>
 			 </h4>
 			 <p class="text-md font-light mt-2 text-white">
-<%# 			 Normal content is white, but if markdowniied, a new paragraph is created and the color switches to black %>
-<%#       markdownify content                                                                                       %>
+<% # 			 Normal content is white, but if markdowniied, a new paragraph is created and the color switches to black %>
+<% #       markdownify content                                                                                      %>
 <%=       content                                                                                                   %>
 				</p>
 		 </blockquote>

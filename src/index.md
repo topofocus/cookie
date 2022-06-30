@@ -5,8 +5,15 @@ front_matter do
   background_image 'https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1267&amp;q=80'
 
   header  'Your story starts with us'
-  preamble  "This is a simple example of a Landing Page you can build using
-                  Cookie. You can see README file for installation and customization."
+  preamble  "This is an example of a Landing Page you can build using
+                  Cookie. The README file covers details for installation and customization.
+                  (Some) Documentation is included in the Blog"
+
+  navbar_background "bg-gray-900"             # Prefix 'bg'
+  navbar_logo "text-pink-300"                 # Logo & Hambuger
+  navbar_button "bg-orange-500"               # Prefix "bg"
+  navbar_icon "lg:text-green-600"             # Prefix "lg:text"
+  navbar_label "lg:text-yellow-300"            # Prefix "lg:text"  
 
   tmp_cards = []
   tmp_cards << { title: 'Test',
@@ -100,14 +107,6 @@ front_matter do
                     continue whatever happens.
 <%          end                                                                                               %>
         </div></div>
-            </div>
-<%= render Shared::RoundedPicture.new( image: '/images/section1.jpeg', color: 'pink',
-                                                    title: 'Top Notch Serices') do                            %>
-                    The Arctic Ocean freezes every winter and much of the
-                    sea-ice then thaws every summer, and that process will
-                    continue whatever happens.
-<%          end                                                                                               %>
-        </div></div>
       </section>
       <section class="relative py-20">
         <div
@@ -182,22 +181,9 @@ front_matter do
                     Web Developer
                   </p>
                   <div class="mt-6">
-                    <button
-                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-facebook-f"></i></button
-                    ><button
-                      class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-dribbble"></i>
-                    </button>
+<%         ["dribbble", "facebook", "twitter"].each do | icon |                                                   %>
+<%=          render Shared::RoundedIcon.new( icon, true)                                                          %> 
+<%          end                                                                                                   %>
                   </div>
                 </div>
               </div>
@@ -216,17 +202,9 @@ front_matter do
                     Marketing Specialist
                   </p>
                   <div class="mt-6">
-                    <button
-                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-google"></i></button
-                    ><button
-                      class="bg-blue-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-facebook-f"></i>
-                    </button>
+<%         ["facebook", "google"].each do | icon |                                     %>
+<%=          render Shared::RoundedIcon.new( icon, true)                               %> 
+<%          end                                                                        %>
                   </div>
                 </div>
               </div>
@@ -245,22 +223,9 @@ front_matter do
                     UI/UX Designer
                   </p>
                   <div class="mt-6">
-                    <button
-                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-google"></i></button
-                    ><button
-                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-instagram"></i>
-                    </button>
+<%         [ "google", "twitter","instagram"].each do | icon |                         %>
+<%=          render Shared::RoundedIcon.new( icon, true)                               %> 
+<%          end                                                                        %>
                   </div>
                 </div>
               </div>
@@ -279,27 +244,9 @@ front_matter do
                     Founder and CEO
                   </p>
                   <div class="mt-6">
-                    <button
-                      class="bg-pink-500 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-dribbble"></i></button
-                    ><button
-                      class="bg-red-600 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-google"></i></button
-                    ><button
-                      class="bg-blue-400 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-twitter"></i></button
-                    ><button
-                      class="bg-gray-800 text-white w-8 h-8 rounded-full outline-none focus:outline-none mr-1 mb-1"
-                      type="button"
-                    >
-                      <i class="fab fa-instagram"></i>
-                    </button>
+<%         ["dribbble", "google", "twitter","instagram"].each do | icon |              %>
+<%=          render Shared::RoundedIcon.new( icon, true)                               %> 
+<%          end                                                                        %>
                   </div>
                 </div>
               </div>
